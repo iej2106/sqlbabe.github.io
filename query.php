@@ -4,8 +4,8 @@
 $data = json_decode(file_get_contents('php://input'), true);
 $query = $data['query'];
 
-// Connect to your database (replace dbname, username, password with your database credentials)
-$pdo = new PDO('mysql:host=localhost;dbname=mydatabase', 'username', 'password');
+// Connect to your database (replace dbname, root, password with your database credentials)
+$pdo = new PDO('mysql:host=localhost;dbname=mydatabase', 'username');
 
 // Prepare and execute the SQL query
 $statement = $pdo->prepare($query);
